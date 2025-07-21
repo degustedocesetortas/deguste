@@ -1,7 +1,7 @@
 import { LogOut, ShoppingBag, User } from "lucide-react";
 import Link from "next/link";
 import type { ReactElement } from "react";
-import { logout } from "@/app/login/actions";
+import { logout } from "@/app/(auth)/actions";
 import { links } from "@/constants/nav";
 import type { ILinks } from "@/constants/type";
 import { createClient } from "@/utils/db/supabase/server";
