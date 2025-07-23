@@ -1,6 +1,6 @@
-import { Eye, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { icons } from "@/constants/icons";
 
 const productStatus = {
   new: () => (
@@ -52,7 +52,7 @@ export function CardProduct({
               type="button"
               className="flex gap-3 items-center cursor-pointer"
             >
-              <Eye size={16} /> Ver Detalhes
+              {icons.default({ size: 16 }).eye} Ver Detalhes
             </button>
           </Link>
         </div>
@@ -79,7 +79,7 @@ export function CardProduct({
             type="button"
             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white text-sm font-semibold py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
-            <Plus size={18} /> Adicionar ao Carrinho
+            {icons.default({ size: 18 }).plus} Adicionar ao Carrinho
           </button>
         </div>
       </div>

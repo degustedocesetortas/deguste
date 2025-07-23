@@ -1,7 +1,7 @@
-import { LogOut, ShoppingBag, User } from "lucide-react";
 import Link from "next/link";
 import type { ReactElement } from "react";
 import { logout } from "@/app/(auth)/actions";
+import { icons } from "@/constants/icons";
 import { links } from "@/constants/nav";
 import type { ILinks } from "@/constants/type";
 import { createClient } from "@/utils/db/supabase/server";
@@ -15,12 +15,12 @@ interface IAction {
 
 const actions: IAction[] = [
   {
-    icon: <User size={20} />,
+    icon: icons.default({ size: 20 }).user,
     href: "/perfil",
     title: "perfil",
   },
   {
-    icon: <ShoppingBag size={20} />,
+    icon: icons.store({ size: 20 }).cart,
     href: "carrinho",
     title: "carrinho",
   },
@@ -33,7 +33,7 @@ export async function NavBar() {
   return (
     <div className=" bg-white w-full py-5 shadow-sm border-b border-pink-200">
       <div className="container mx-auto flex justify-between items-center">
-        <div>
+        <div className="min-w-24">
           <Link href={"/"}>Deguste</Link>
         </div>
         <nav>
@@ -64,7 +64,11 @@ export async function NavBar() {
                 formAction={logout}
                 className="hover:bg-gray-300 rounded-md p-2 cursor-pointer"
               >
-                <LogOut size={20} />
+                {
+                  icons.default({
+                    size: 20,
+                  }).logout
+                }
               </button>
             ) : (
               <Link href={"/login"}>

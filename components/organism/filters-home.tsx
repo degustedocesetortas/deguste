@@ -1,15 +1,19 @@
 "use client";
-
-import { Search } from "lucide-react";
 import { useState } from "react";
 import { categories } from "@/constants/filter";
+import { icons } from "@/constants/icons";
 
 export function FiltersHome() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   return (
     <div className="flex flex-col gap-4 items-stretch sm:items-center bg-white rounded-custom p-4 sm:p-6 shadow-lg">
       <div className="relative flex-1 w-full">
-        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+        {
+          icons.default({
+            className:
+              "absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5",
+          }).search
+        }
         {/* <Input
           placeholder="Buscar doces deliciosos..."
           value={searchTerm}

@@ -1,6 +1,6 @@
-import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { icons } from "@/constants/icons";
 
 const mockItems = [
   {
@@ -26,7 +26,11 @@ export default function Carrinho() {
   if (items.length === 0) {
     return (
       <div className="max-w-2xl mx-auto text-center py-8 sm:py-12 px-4">
-        <ShoppingBag className="h-16 sm:h-24 w-16 sm:w-24 text-gray-300 mx-auto mb-4" />
+        {
+          icons.store({
+            className: "h-16 sm:h-24 w-16 sm:w-24 text-gray-300 mx-auto mb-4",
+          }).bag
+        }
         <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
           Seu carrinho está vazio
         </h1>
@@ -46,8 +50,8 @@ export default function Carrinho() {
   }
 
   return (
-    <section className="max-w-4xl mx-auto ">
-      <h1 className="text-2xl text-center sm:text-3xl font-bold text-primary mb-6 sm:mb-8">
+    <section>
+      <h1 className="text-2xl  sm:text-3xl font-bold text-primary mb-6 sm:mb-8">
         Meu Carrinho
       </h1>
 
@@ -82,7 +86,11 @@ export default function Carrinho() {
                       type="button"
                       className="h-8 w-8 sm:h-10 sm:w-10 border rounded-md border-gray-200 cursor-pointer hover:bg-gray-100"
                     >
-                      <Minus className="h-3 w-3 sm:h-4 sm:w-4 mx-auto" />
+                      {
+                        icons.default({
+                          className: "h-3 w-3 sm:h-4 sm:w-4 mx-auto",
+                        }).minus
+                      }
                     </button>
 
                     <input
@@ -96,7 +104,11 @@ export default function Carrinho() {
                       type="button"
                       className="h-8 w-8 sm:h-10 sm:w-10 border rounded-md border-gray-200 cursor-pointer hover:bg-gray-100"
                     >
-                      <Plus className="h-3 w-3 sm:h-4 sm:w-4 mx-auto" />
+                      {
+                        icons.default({
+                          className: "h-3 w-3 sm:h-4 sm:w-4 mx-auto",
+                        }).plus
+                      }
                     </button>
                   </div>
 
@@ -104,7 +116,11 @@ export default function Carrinho() {
                     type="button"
                     className="text-red-500 cursor-pointer hover:text-red-700 h-8 w-8 sm:h-10 sm:w-10 hover:bg-gray-100 rounded-md"
                   >
-                    <Trash2 className="h-3 w-3 sm:h-4 sm:w-4 mx-auto" />
+                    {
+                      icons.default({
+                        className: "h-3 w-3 sm:h-4 sm:w-4 mx-auto",
+                      }).trash
+                    }
                   </button>
                 </div>
               </div>

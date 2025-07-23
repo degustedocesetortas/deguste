@@ -1,6 +1,6 @@
-import { Pencil } from "lucide-react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
+import { icons } from "@/constants/icons";
 import { createClient } from "@/utils/db/supabase/server";
 
 interface IUser {
@@ -53,8 +53,8 @@ export default async function Perfil() {
   }
   // console.log(data);
   return (
-    <section className="max-w-4xl mx-auto">
-      <h1 className="text-2xl text-center sm:text-3xl font-bold text-primary mb-6 sm:mb-8">
+    <section>
+      <h1 className="text-2xl  sm:text-3xl font-bold text-primary mb-6 sm:mb-8">
         Meu Perfil
       </h1>
 
@@ -79,7 +79,7 @@ export default async function Perfil() {
           <div className="flex justify-between items-center">
             <h3 className="font-semibold text-xl">Informações Pessoais</h3>
             <span className="text-primary flex items-center gap-2 cursor-pointer">
-              <Pencil size={18} /> Editar
+              {icons.default({ size: 18 }).edit} Editar
             </span>
           </div>
 

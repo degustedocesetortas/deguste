@@ -7,6 +7,11 @@ export const links: ILinks[] = [
     href: "/",
   },
   {
+    name: "Favoritos",
+    key: "favoritos",
+    href: "/favoritos",
+  },
+  {
     name: "Pedidos",
     key: "pedidos",
     href: "/pedidos",

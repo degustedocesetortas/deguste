@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.biome": true
+    "source.fixAll": "explicit",
+    "source.fixAll.biome": "explicit"
   }
 }

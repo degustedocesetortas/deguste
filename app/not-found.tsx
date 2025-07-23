@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className=" flex items-center justify-center min-h-screen">
-      <div className="text-center max-w-2xl mx-auto">
-        <div className="relative bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 rounded-2xl sm:rounded-3xl p-8 sm:p-12 md:p-16 text-white overflow-hidden mb-8">
+    <section className=" flex items-center justify-center h-full">
+      <div className="text-center max-w-2xl mx-auto flex justify-center items-center">
+        <div className="relative bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 rounded-2xl sm:rounded-3xl p-4 text-white overflow-hidden ">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="relative z-10">
             <div className="text-8xl sm:text-9xl md:text-[12rem] font-bold mb-4 text-pink-200 opacity-90">
